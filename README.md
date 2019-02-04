@@ -5,8 +5,7 @@ List-Unsubscribe header for mail sent from SMF (Simple Machines Forum)
 
 ### Description:
 
-<div align="center"><span style="font-size: 12pt;" class="bbc_size">**List-Unsubscribe header**</span>  
-by **[alexetgus](https://www.simplemachines.org/community/index.php?action=profile;u=363570)**  
+<div align="center">
 
 This modification (for SMF 2.0 Final only) adds a header "List-Unsubscribe" to the e-mails sent by SMF.  
 This header is the unsubscribe link of a topic for notifications, if exist is. Else, it's a link to the email of the webmaster.  
