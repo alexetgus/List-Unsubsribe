@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+	<id>alexetgus:List-Unsubscribe_header_mail</id>
+	<version>1.0</version>
+	<file name="$sourcedir/Subs-Post.php">
+		<operation>
+			<search position="replace"><![CDATA[	// Line breaks need to be \r\n only in windows or for SMTP.
+	$line_break = $context['server']['is_windows'] || !$use_sendmail ? "\r\n" : "\n";]]></search>
+			<add><![CDATA[	// Line breaks need to be \r\n only in windows or for SMTP.
+	$line_break = $context['server']['is_windows'] || !$use_sendmail ? "\r\n" : "\n";
+
+	// Search and define link of unsubscribed if existing (alexetgus:List-Unsubscribe_header_mail)
+	$pattern = '/'. $line_break. '/';
+	$search  = preg_split($pattern, $message);
+	foreach($search as $line) {
+		if(preg_match('/^(https?:)(.*)notify(.*)$/i', $line, $match)) $unsubscribe = $match[1]. $match[2]. 'notify'. $match[3];
+	}]]></add>
+		</operation>
+
+		<operation>
+			<search position="replace"><![CDATA[	$headers .= 'X-Mailer: SMF' . $line_break;]]></search>
+			<add><![CDATA[	$headers .= 'X-Mailer: SMF' . $line_break;
+	if(empty($unsubscribe)) $headers .= 'List-Unsubscribe: mailto:'. $webmaster_email. $line_break; // (alexetgus:List-Unsubscribe_header_mail)
+	else $headers .= 'List-Unsubscribe: '. $unsubscribe. $line_break;]]></add>
+		</operation>
+	</file>
+</modification>
