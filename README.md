@@ -1,6 +1,5 @@
 # List-Unsubscribe
 List-Unsubscribe header for mail sent from SMF (Simple Machines Forum)
-<<<<<<< Updated upstream
 
 <div id="descript">
 
@@ -45,4 +44,3 @@ http://mysite.tld?notify=xxxx**_
 **[https://chez-oim.org](https://chez-oim.org)  -  _This mod is copylefted_**  
 </div>
 =======
->>>>>>> Stashed changes
