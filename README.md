@@ -39,8 +39,8 @@ http://mysite.tld/notify/page.php**_
 OR  
 
 _**For unsusbscribe this newsletter, click to the link :  
-http://mysite.tld?notify=xxxx**_  
+http://mysite.tld/?notify=xxxx**_  
 
 **[https://chez-oim.org](https://chez-oim.org)  -  _This mod is copylefted_**  
 </div>
-=======
+
