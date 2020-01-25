@@ -5,11 +5,11 @@
 	<name>List-Unsubscribe</name>
 	<version>1.0</version>
 	<type>modification</type>
-	<install for="2.0, 2.0.1 -2.0.15">
+	<install for="2.0, 2.0.1 -2.0.17">
 		<modification format="xml" type="file">List-Unsubscribe.xml</modification>
 		<readme parsebbc="true">readme.txt</readme>
 	</install>
-	<uninstall for="2.0, 2.0.1 -2.0.15">
+	<uninstall for="2.0, 2.0.1 -2.0.17">
 		<modification format="xml" type="file" reverse="true">List-Unsubscribe.xml</modification>
 		<readme type="inline">This will uninstall the List-Unsubscribe_header_mail</readme>
 	</uninstall>
