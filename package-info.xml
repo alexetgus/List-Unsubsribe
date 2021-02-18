@@ -3,13 +3,13 @@
 <package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
 	<id>alexetgus:List-Unsubscribe_header_mail</id>
 	<name>List-Unsubscribe</name>
-	<version>1.0</version>
+	<version>1.2</version>
 	<type>modification</type>
-	<install for="2.0, 2.0.1 -2.0.17">
+	<install for="2.0, 2.0.1 -2.0.18">
 		<modification format="xml" type="file">List-Unsubscribe.xml</modification>
 		<readme parsebbc="true">readme.txt</readme>
 	</install>
-	<uninstall for="2.0, 2.0.1 -2.0.17">
+	<uninstall for="2.0, 2.0.1 -2.0.18">
 		<modification format="xml" type="file" reverse="true">List-Unsubscribe.xml</modification>
 		<readme type="inline">This will uninstall the List-Unsubscribe_header_mail</readme>
 	</uninstall>
